@@ -11,6 +11,6 @@ docker push johnpolansky/multi-server:$SHA
 docker push johnpolansky/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/client-deployment server=johnpolansky/multi-client:$SHA
+kubectl set image deployments/client-deployment client=johnpolansky/multi-client:$SHA
 kubectl set image deployments/server-deployment server=johnpolansky/multi-server:$SHA
-kubectl set image deployments/worker-deployment server=johnpolansky/multi-worker:$SHA
+kubectl set image deployments/worker-deployment worker=johnpolansky/multi-worker:$SHA
