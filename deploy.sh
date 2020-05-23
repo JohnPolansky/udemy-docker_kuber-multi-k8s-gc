@@ -6,9 +6,9 @@ dockerpush johnpolansky/multi-client:latest
 dockerpush johnpolansky/multi-server:latest
 dockerpush johnpolansky/multi-worker:latest
 
-dockerpush johnpolansky/multi-client:$SHA
-dockerpush johnpolansky/multi-server:$SHA
-dockerpush johnpolansky/multi-worker:$SHA
+docker push johnpolansky/multi-client:$SHA
+docker push johnpolansky/multi-server:$SHA
+docker push johnpolansky/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/client-deployment server=johnpolansky/multi-client:$SHA
