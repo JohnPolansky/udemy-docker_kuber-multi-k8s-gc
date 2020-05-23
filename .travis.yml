@@ -3,7 +3,7 @@ services:
   - docker
 env:
   globa:
-    - SHA=$(git prev-parse HEAD)
+    - SHA=$(git rev-parse HEAD)
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
   - openssl aes-256-cbc -K $encrypted_8ede7f2e3be9_key -iv $encrypted_8ede7f2e3be9_iv -in gc_service_account.json.enc -out ./gc_service_account.json -d
